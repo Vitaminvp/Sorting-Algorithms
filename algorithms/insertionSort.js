@@ -1,15 +1,16 @@
 const insertionSort = arr => {
-  const n = arr.length;
-  for (let i = 0; i < n; i++) {
-    let v = arr[i],
-      j = i - 1;
-    while (j >= 0 && arr[j] > v) {
-      arr[j + 1] = arr[j];
+  const result = [...arr];
+  const length = result.length;
+  for (let i = 1; i < length; i++) {
+    let temp = result[i];
+    let j = i - 1;
+    while (j >= 0 && result[j] > temp) {
+      result[j + 1] = result[j];
       j--;
     }
-    arr[j + 1] = v;
+    result[j + 1] = temp;
   }
-  return arr;
+  return result;
 };
 
 module.exports = insertionSort;

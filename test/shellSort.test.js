@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-const bubbleSort = require("../algorithms/bubbleSort");
+const shellSort = require("../algorithms/bubbleSort");
 const { positiveCases } = require("../helpers/consts");
 
 
@@ -13,7 +13,7 @@ const negativeCases = [
 
 describe("Positive cases (default behaviour)", () => {
   test.each(positiveCases)("convert %p into %p", (argument, expectedResult) => {
-    expect(bubbleSort(argument)).toEqual(expectedResult);
+    expect(shellSort(argument)).toEqual(expectedResult);
   });
 });
 

@@ -5,6 +5,9 @@ Sorting Algorithms in JavaScript
  + [Selection Sort](#selectionSort)
  + [Insertion Sort](#insertionSort)
  + [Merge Sort](#mergeSort)
+ + [Quick Sort](#quickSort)
+ + [Shell Sort](#shellSort)
+ + [Counting Sort](#сountingSort)
 
 
 ## Bubble sort
@@ -64,6 +67,40 @@ Sorting Algorithms in JavaScript
 По сути, это означает, что вместо работы с массивом в целом он непрерывно разбивает его на две части, 
 пока обе половины не отсортированы, а затем половины объединяются в один решенный список.
 
-> Сложность алгоритма: O(n<sup>2</sup>).
+> Сложность алгоритма: O(n log n).
 
 ![Merge Sort](./public/merge-sort-animation2.gif "Merge sort animation")
+
+## Quick Sort
+
+<a name="quickSort"></a>
+
+> Сложность алгоритма: O(n<sup>2</sup>).
+
+![Quick Sort](./public/quick-sort-animation.gif "Quick sort animation")
+
+## Shell Sort
+
+<a name="shellSort"></a>Shell Sort «сортировкой по убыванию», улучшает Insertion Sort, 
+разбивая исходный массив на несколько меньших подмассивов, каждый из которых сортируется с использованием Insertion Sort. 
+Способ выбора этих подмассивов - уникальность Shell Sort. Вместо того, чтобы разбивать массив на подмассивы смежных элементов, 
+сортировка оболочки использует интервал *d*, иногда называемый интервал *gap*, для создания подмассива, выбирая все элементы, 
+которые являются d-ми элементами, отдельно.
+  
+  + Самый простой пример *d = n / 2*, *d<sub>2</sub> = d / 2 … d<sub>n</sub> = 1*.  ***O(n<sup>2</sup>)***
+  + Предложение Хиббарда: проверить на всем n<sup>i — 1</sup> <= n. ***O(n<sup>3/2</sup>)***
+  + Числа Седжвика ...
+
+> Сложность алгоритма: O(n<sup>2</sup>) или O(n<sup>3/2</sup>).
+
+![Shell Sort](./public/shell-sort.gif "Shell sort animation")
+[![Shell Sort](https://img.youtube.com/vi/lvts84Qfo8o/0.jpg)](https://www.youtube.com/watch?v=lvts84Qfo8o)
+
+## Counting Sort
+
+Вначале для каждого элемента массива подсчитывается количество элементов, меньших, чем он, и на основе этой 
+информации текущий элемент помещается в соответствующее место отсортированного массива. 
+
+> Сложность алгоритма: O(n<sup>2</sup>).
+
+![Counting Sort](./public/counting-sort-animation.gif "Counting sort animation")
