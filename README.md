@@ -8,6 +8,7 @@ Sorting Algorithms in JavaScript
  + [Quick Sort](#quickSort)
  + [Shell Sort](#shellSort)
  + [Counting Sort](#сountingSort)
+ + [Comb Sort](#combSort)
 
 
 ## Bubble sort
@@ -27,6 +28,8 @@ Sorting Algorithms in JavaScript
 
 ![Bubble sort animation](./public/bubble-sort-animation.gif "Bubble sort animation")
 
+[wiki](https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BF%D1%83%D0%B7%D1%8B%D1%80%D1%8C%D0%BA%D0%BE%D0%BC "Bubble sort animation")
+
 ## Selection Sort
 
 <a name="selectionSort"></a>Сортировка выбором ***Selection Sort*** начинается с поиска наименьшего элемента в списке и обмена его с первым элементом 
@@ -42,7 +45,8 @@ Sorting Algorithms in JavaScript
 
 ![Selection Sort](./public/selection-sort-animation.gif "Selection sort animation")
 
-
+[wiki](https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BE%D0%BC
+ "Selection sort")
 
 ## Insertion Sort
 
@@ -59,6 +63,8 @@ Sorting Algorithms in JavaScript
 > Сложность алгоритма: O(n<sup>2</sup>).
 
 ![Insertion Sort](./public/insertion-sort-animation2.gif "Insertion sort animation")
+[wiki](https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0%D0%BC%D0%B8
+ "Selection sort")
 
 ## Merge Sort
 
@@ -70,6 +76,8 @@ Sorting Algorithms in JavaScript
 > Сложность алгоритма: O(n log n).
 
 ![Merge Sort](./public/merge-sort-animation2.gif "Merge sort animation")
+[wiki](https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D1%81%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5%D0%BC
+"Merge sort")
 
 ## Quick Sort
 
@@ -78,13 +86,15 @@ Sorting Algorithms in JavaScript
 > Сложность алгоритма: O(n<sup>2</sup>).
 
 ![Quick Sort](./public/quick-sort-animation.gif "Quick sort animation")
+[wiki](https://ru.wikipedia.org/wiki/%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0 "Quick sort")
+
 
 ## Shell Sort
 
 <a name="shellSort"></a>Shell Sort «сортировкой по убыванию», улучшает Insertion Sort, 
 разбивая исходный массив на несколько меньших подмассивов, каждый из которых сортируется с использованием Insertion Sort. 
 Способ выбора этих подмассивов - уникальность Shell Sort. Вместо того, чтобы разбивать массив на подмассивы смежных элементов, 
-сортировка оболочки использует интервал *d*, иногда называемый интервал *gap*, для создания подмассива, выбирая все элементы, 
+сортировка оболочки использует интервал *d*, иногда называемый *gap*, для создания подмассива, выбирая все элементы, 
 которые являются d-ми элементами, отдельно.
   
   + Самый простой пример *d = n / 2*, *d<sub>2</sub> = d / 2 … d<sub>n</sub> = 1*.  ***O(n<sup>2</sup>)***
@@ -98,9 +108,22 @@ Sorting Algorithms in JavaScript
 
 ## Counting Sort
 
-Вначале для каждого элемента массива подсчитывается количество элементов, меньших, чем он, и на основе этой 
+<a name="countingSort"></a>Вначале для каждого элемента массива подсчитывается количество элементов, меньших, чем он, и на основе этой 
 информации текущий элемент помещается в соответствующее место отсортированного массива. 
 
 > Сложность алгоритма: O(n<sup>2</sup>).
 
 ![Counting Sort](./public/counting-sort-animation.gif "Counting sort animation")
+
+## Comb Sort
+
+<a name="combSort"></a>Сортировка расчёской схожа с сортировкой пузырьком. 
+Основная идея этого алгоритма — устранить маленькие значения в конце массива, которые крайне замедляют сортировку пузырьком 
+(большие значения в начале массива, не представляют проблемы для алгоритма сортировки пузырьком). 
+
+В сортировке пузырьком, когда сравниваются два элемента, промежуток (расстояние друг от друга) равен 1. 
+Основная идея сортировки расчёской в том, что этот промежуток может быть гораздо больше, чем единица.
+
+> Сложность алгоритма: O(n<sup>2</sup>).
+
+![Comb Sort](./public/comb-sort-animation.gif "Comb sort animation")
