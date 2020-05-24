@@ -1,0 +1,16 @@
+{
+  "name": "Sorting-Algorithms",
+  "version": "1.0.1",
+  "description": "Sorting Algorithms in JavaScript",
+  "main": "index.js",
+  "repository": "https://github.com/Vitaminvp/Sorting-Algorithms.git",
+  "author": "Vitamin <vitamin@ukr.net>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jest": "^26.0.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
